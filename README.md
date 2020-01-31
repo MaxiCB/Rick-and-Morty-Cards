@@ -1,3 +1,9 @@
+## Rick and Morty API Explorer
+
+This is a React Application meant to view data from the Rick and Morty API
+- https://rickandmortyapi.com/api/
+This application was alos used to gain a better understanding of using MaterialUI within react
+
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.

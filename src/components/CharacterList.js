@@ -8,6 +8,7 @@ import KeyboardArrowLeft from '@material-ui/core/Icon';
 import KeyboardArrowRight from '@material-ui/core/Icon';
 
 import Header from './Header';
+import CharacterCard from './CharacterCard';
 import SearchForm from "./SearchForm";
 
 const CharacterList = props => {
@@ -100,7 +101,13 @@ const CharacterList = props => {
       />
       <SearchForm setCharacter={props.setCharacter}/>
       <div className={classes.grid}>
-      {/* {Need to add CharacterCard} */}
+      {characters !== undefined && characters.map((character, index) => {
+        if(characterName !== undefined && character.name.toLowerCase().includes(characterName.toLowerCase())) {
+            return <CharacterCard {...character} key={index}/>
+        } else {
+          return <CharacterCard {...character} key={index}/>
+        }
+      })}
       </div>
       </div>
   );
