@@ -11,6 +11,12 @@ export default function Header() {
     },
     button: {
       margin: '10px'
+    },
+    root: {
+      flexGrow: 1,
+      padding: theme.spacing(1),
+      textAlign: 'center',
+      color: theme.palette.text.primary,
     }
   }));
 
@@ -18,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="ui centered">
-      <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
+      <h1 className={classes.root}>Rick & Morty Fan Page</h1>
       <Link to='/' className={classes.link}><Button variant="outlined" color="primary" className={classes.button}>Home</Button></Link>
     </header>
   );
