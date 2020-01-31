@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
 import WelcomePage from '../components/WelcomePage';
+import CharacterList from '../components/CharacterList';
 
 const App = props => {
 
@@ -15,7 +16,7 @@ const App = props => {
       flexGrow: 1,
       padding: theme.spacing(1),
       textAlign: 'center',
-      color: theme.palette.text.secondary,
+      color: theme.palette.text.primary,
     }
   }));
 
@@ -25,6 +26,8 @@ const App = props => {
   return (
     <main className={classes.root}>
       <Route exact path='/' component={WelcomePage}/>
+      <Route exact path='/characterList' render={(props) => <CharacterList {...props}
+      currentPage={currentPage} setCharacter={setCharacter} character={character} setCurrentPage={setCurrentPage}/>}/>
     </main>
   );
 }
